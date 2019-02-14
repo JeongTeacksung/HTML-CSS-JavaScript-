@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/html_prj/common/main_v190130.css">
+<style type="text/css">
+	#btnDiv{ height: 40px }
+	#output{ width: 400px; height: 200px; border: 1px solid #333; overflow: auto }
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		document.getElementById("lower").addEventListener("click", lower);
+		document.getElementById("upper").addEventListener("click", upper);
+		document.getElementById("num").addEventListener("click", num);
+	}
+	function lower(){
+		var obj=document.frm;
+		var text=obj.text.value;
+		var textLower=obj.text.value.toLowerCase();
+		var arr=new Array();
+		var arr2=new Array();
+		var output="";
+		
+		for(var i=0; i<text.length; i++){
+			var textNum=parseInt(text.charAt(i));
+			switch (textNum) {
+			case 1: break;
+			case 2: break;
+			case 3: break;
+			case 4: break;
+			case 5: break;
+			case 6: break;
+			case 7: break;
+			case 8: break;
+			case 9: break;
+			case 0: break;
+			default:
+				arr[i]=text.charAt(i);
+			}
+		}//end for
+		alert(arr[0]);
+		for(var i=0; i<arr.length; i++){
+				if(text.charAt(i)==textLower.charAt(i)){
+					output+=arr[i];
+				}//end if
+		}//end for
+		document.getElementById("output").innerHTML="소문자 : "+output+"<br/>";
+	}
+	function upper(){
+		var obj=document.frm;
+		var text=obj.text.value;
+		var textUpper=obj.text.value.toUpperCase();
+		var arr=new Array();
+		var arr2=new Array();
+		var output="";
+		
+		for(var i=0; i<text.length; i++){
+			var textNum=text.charAt(i);
+			arr[i]=parseInt(textNum);
+		}//end for
+		for(var i=0; i<text.length; i++){
+			if(!(arr[i]==NaN)){
+				if(text.charAt(i)==textUpper.charAt(i)){
+					output+=text.charAt(i);
+				}//end if
+			}//end if
+		}//end for
+		document.getElementById("output").innerHTML="대문자 : "+output+"<br/>";
+	}
+	
+</script>
+</head>
+<body>
+<form name="frm">
+	<div id="btnDiv">
+		<input type="text" name="text" id="text" class="inputBox" />
+		<input type="button" value="소문자" id="lower" class="btn"/>
+		<input type="button" value="대문자" id="upper" class="btn"/>
+		<input type="button" value="숫자" id="num" class="btn"/>
+	</div>
+	<div id="output">
+	</div>
+</form>
+</body>
+</html>

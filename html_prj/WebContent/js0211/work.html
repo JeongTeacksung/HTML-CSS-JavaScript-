@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/html_prj/common/main_v190130.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		//이벤트 등록
+		document.getElementById("frm").addEventListener("click",getValue);
+		document.getElementById("frm2").addEventListener("click",getValue2);
+	
+	}//function
+	function getValue(){
+		//폼 태그의 이름속성을 사용하여 값설정
+		
+		//1. form 태그 얻기
+		var obj=document.frm;
+		//2. form 태그의 하위 컨트롤 값 얻기
+		var name=obj.name.value;
+		
+		//1. div 얻기(출력대상)
+		var divNode=document.getElementById("output");
+		//2. 출력 내용 생성
+		var output="<h1>"+name+"</h1>"
+					+"<h2>"+name+"</h2>"
+					+"<h3>"+name+"</h3>"
+					+"<h4>"+name+"</h4>"
+					+"<h5>"+name+"</h5>"
+					+"<h6>"+name+"</h6>";
+		//3. 출력
+		divNode.innerHTML=output;
+	}//getValue
+	function getValue2(){
+		var obj=document.frm;
+		var gugudan=obj.gugudan.value;
+		
+		var divNode=document.getElementById("output");
+		//2. 출력 내용 생성
+		if(2<=gugudan&&gugudan<=9){
+			var output="<table border='1'><tr><td onclick='func1()'>"+gugudan+"x"+"1"+"<td></tr>"
+						+"<tr><td onclick='func2()'>"+gugudan+"x"+"2"+"</td></tr>"
+						+"<tr><td onclick='func3()'>"+gugudan+"x"+"3"+"</td></tr>"
+						+"<tr><td onclick='func4()'>"+gugudan+"x"+"4"+"</td></tr>"
+						+"<tr><td onclick='func5()'>"+gugudan+"x"+"5"+"</td></tr>"
+						+"<tr><td onclick='func6()'>"+gugudan+"x"+"6"+"</td></tr>"
+						+"<tr><td onclick='func7()'>"+gugudan+"x"+"7"+"</td></tr>"
+						+"<tr><td onclick='func8()'>"+gugudan+"x"+"8"+"</td></tr>"
+						+"<tr><td onclick='func9()'>"+gugudan+"x"+"9"+"</td></tr>"
+						+"</table>";
+		}else{
+			var output="구구단은 2~9단 사이입니다<br/>"
+						+"<marquee direction='left'><Image src='../common/images/img2.jpg'/></marquee>"
+		}
+		//3. 출력
+		divNode.innerHTML=output;
+	}//getValue
+	var func1=function(){
+		var obj=document.frm;
+		var gugudan=obj.gugudan.value;
+		alert(gugudan*1+" 입니다"); 
+	}//func
+	var func2=function(){
+		var obj=document.frm;
+		var gugudan=obj.gugudan.value;
+		alert(gugudan*2+" 입니다"); 
+	}//func
+	var func3=function(){
+		var obj=document.frm;
+		var gugudan=obj.gugudan.value;
+		alert(gugudan*3+" 입니다"); 
+	}//func
+	var func4=function(){
+		var obj=document.frm;
+		var gugudan=obj.gugudan.value;
+		alert(gugudan*4+" 입니다"); 
+	}//func
+	var func5=function(){
+		var obj=document.frm;
+		var gugudan=obj.gugudan.value;
+		alert(gugudan*5+" 입니다"); 
+	}//func
+	var func6=function(){
+		var obj=document.frm;
+		var gugudan=obj.gugudan.value;
+		alert(gugudan*6+" 입니다"); 
+	}//func
+	var func7=function(){
+		var obj=document.frm;
+		var gugudan=obj.gugudan.value;
+		alert(gugudan*7+" 입니다"); 
+	}//func
+	var func8=function(){
+		var obj=document.frm;
+		var gugudan=obj.gugudan.value;
+		alert(gugudan*8+" 입니다"); 
+	}//func
+	var func9=function(){
+		var obj=document.frm;
+		var gugudan=obj.gugudan.value;
+		alert(gugudan*9+" 입니다"); 
+	}//func
+	
+</script>
+</head>
+<body>
+	<form name="frm">
+		<label>이름</label>
+		<input type="text" name="name" id="name" class="inputBox">
+		<input type="button" value="확인" class="btn" id="frm"><br/>
+		<label>구구단</label>
+		<input type="text" name="gugudan" id="addr" class="inputBox">		
+		<input type="button" value="입력" class="btn" id="frm2" ><br/>
+		
+	</form>
+	<div id="output"></div>
+</body>
+</html>

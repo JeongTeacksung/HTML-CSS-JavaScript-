@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>넓이, 높이, 바닥색, 테두리 선</title>
+<style type="text/css">
+	div{background-color: #CCE1C3}
+	/* 넓이가 설정되면 web browser의 크기가 변경되더라도 안의 데이터가 움직이지 않는다. */
+	.width{width:500px}
+	.height{height:40px}
+	.background{background-color: #F3E3C2}
+	/* 선의 종류 : solid-실선, dotted-점선, dashed-긴접선, double-이중선(선의 두께가 3px부터) */
+	.border{margin-top:10px; border: 1px solid #333}
+	
+	input{background-color:#4E82B4; width:120px}
+	#left{border-left: 2px solid #333}
+	#right{border-right: 2px solid #333}
+	#top{border-top: 2px solid #333}
+	#bottom{border-bottom: 2px solid #333}
+	/* table의 셀간 간격 조절 : border-spacing:셀간 간격px */
+	table{border:0px; border-spacing: 0px}
+	th, td{border: 1px solid #4EB2B4}
+	
+	.num{width:40px}
+	.name{width:120px}
+	.favorite{width:300px}
+	
+</style>
+</head>
+<body>
+<div class="width">넓이</div>
+<div class="height">높이</div>
+<div class="background">바닥색</div>
+<div class="border">테두리선</div>
+<input type="text"/>
+<div id="left">왼쪽선</div>
+<div id="right">오른선</div>
+<div id="top">윗선</div>
+<div id="bottom">아랫선</div>
+
+<table>
+<tr>
+	<th class="num">번호</th><th class="name">이름</th><th class="favorite">좋아하는 것</th>
+</tr>
+<tr>
+	<th>1</th><th>공선의</th><th>돈</th>
+</tr>
+<tr>
+	<th>2</th><th>이재현</th><th>게임</th>
+</tr>
+<tr>
+	<th>3</th><th>김정윤</th><th>철권</th>
+</tr>
+</table>
+
+</body>
+</html>
