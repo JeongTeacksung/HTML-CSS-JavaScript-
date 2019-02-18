@@ -3,33 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/html_prj/common/main_v190130.css">
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/html_prj/common/main_v190130.css"/>
 <style type="text/css">
-
+	#header{border:1px solid #333; width: 300px; height: 300px;}
 </style>
 <script type="text/javascript">
-	window.onload=function(){
-		range();
-	}//function
-	function range(){
+	function change(){
 		var obj=document.frm;
-
-		var size=obj.selsize.value; //range의 값
-		var img=obj.resizeImg; //크기변경할 이미지
-		img.width=size; //크기변경할 이미지의 크기를 range의 값으로 변경한다
-	}
-
+		
+		var size=obj.setSize.value;
+		var img=obj.imgResize;
+		
+		img.width=size;
+		//obj.img.style="width:"+number+"px; height:"+number+"px;";
+	}//change
 </script>
 </head>
 <body>
-<div>
+<div id="workWrap">
 	<form name="frm">
-	<div style="height: 400px">
-		<img src="../common/images/img.png" name="resizeImg" /><br/>
-	</div>
-		<label>범위</label>
-		30<input type="range" name="selsize" min="30" max="300" value="30" onmousemove="range()"/>300
-	<div id="out"></div>
+		<div id="header">
+			<img src="images/dice_1.png" name="imgResize" /><!-- style="width:30px;height:30px;" -->
+		</div>
+		<div>
+			30<input type="range" name="setSize" min="30" max="300" onmousemove="change()"/>300<br/>
+		</div>
 	</form>
 </div>
 </body>

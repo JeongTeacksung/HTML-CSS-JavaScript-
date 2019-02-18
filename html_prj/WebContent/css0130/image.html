@@ -4,24 +4,24 @@
 <meta charset="UTF-8">
 <title>이미지 사용</title>
 <style type="text/css">
-	/* 이미지는 모든 태그에 바닥에 설정할 수 있다.
+	/* 이미지는 모든 태그의 바닥에 설정할 수 있다. 어디든 다 깔 수 있다. 
 		repeat-x : x좌표로 이미지를 반복 시킬 때,
 		repeat-y : y좌표로 이미지를 반복 시킬 때,
 		no-repeat : 반복하지 않음.
 	*/
 	body{background: #FFFFFF url(../common/images/line.png) repeat-x;}
-	div { width:600px; height:300px; 
-		background: #FFFFFF url(../common/images/daum.png) repeat-y}
-	form,table{ background: #FFFFFF url("../common/images/sist_logo.jpg")}
+	div{width : 600px; height:300px; background:#FFFFFF url('../common/images/daum.png') repeat-y}/* div만큼만 깔림. */
+	form,table {background : #FFFFFF url("../common/images/sist_logo.jpg") }
 </style>
 </head>
 <body>
 	<div></div>
-	<form>
-		<label>이름</label><input type="text"/><br>
-		<label>나이</label><input type="text"/><br>
-		<label>주소</label><input type="text"/><br>
+	<form><!-- 서버로 데이터를 전송하는 일을 하는 태그(input,select,textarea) -->
+		<label>이름</label><input type="text"/> <br/>
+		<label>나이</label><input type="text"/> <br/>
+		<label>주소</label><input type="text"/> <br/>
 	</form>
+	
 	<table border="1">
 		<tr height="30">
 			<td width="100">Java SE</td>
@@ -39,6 +39,6 @@
 			<td width="100">Framework</td>
 		</tr>
 	</table>
-
+	
 </body>
 </html>

@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-body, select, button, div, ul, ol, li, form, fieldset, legend, textarea,
-	p, th, td, input {
-	margin: 0;
-	padding: 0
+body, div, ul, ol, li, form, fieldset, legend, select, button, th, td,
+	textarea, p, input {
+	margin: 0px;
+	padding: 0px
 }
 
 fieldset, img {
@@ -12,14 +12,12 @@ fieldset, img {
 
 ul, ol, li {
 	list-style: none
-}
-
+} /* 일반글자들이 왼쪽으로? */
 body, th, td, input, select, textarea, button {
 	font-size: 13px;
-	line-height: 1.5;
-	font-family: '맑은 고딕', 'Malgun Gothic', dotum, '돋움', sans-serif;
+	line-height: 1.5; /* 폰트사이즈의 1.5배? */
+	font-family: '맑은 고딕', dotum, '돋움', sans-serif;
 	color: #3F3F3F;
-	letter-spacing: -1px
 }
 
 a {
@@ -41,8 +39,8 @@ a:hover {
 .btn {
 	border: 1px solid #EDEDED;
 	background-color: #FFFFFF;
-	color: #TCTCTC;
-	height: 20px;
-	padding-left: 3px;
-	padding-right: 3px;
-	cursor:pointer;
+	color: #1C1C1C;
+	height: 22px;
+	padding: 3px;
+	cursor: pointer;
+}
